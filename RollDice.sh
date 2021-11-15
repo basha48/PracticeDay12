@@ -1,7 +1,7 @@
 #! /bin/bash
 
 declare -A RollDice
-declare -A RollDice1
+
 
 for (( i=0;i<50;i++ ))
 
