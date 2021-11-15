@@ -38,4 +38,5 @@ fi
 
 done
 
+
 echo "second smallest value is:" $temp1;
