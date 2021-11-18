@@ -1,17 +1,17 @@
-#! /bin/bash
+#!/bin/bash 
+declare -A Dice
+count=1
 
-declare -A RollDice
-
-
-for (( i=0;i<50;i++ ))
-
+while [ $count -lt 30 ]
 do
-
-
-Dice=$(( ( RANDOM % 6 )  + 1 ));
-RollDice[$i]=$Dice;
+        random=$(((( RANDOM % 6 )) + 1 ))
+        Dice[$random]=$(("${Dice[$random]}" + 1 ))
+        count=$(($count+1))
 
 done
 
-echo "dice is:"${RollDice[@]}
+for(( i=1; i<=6; i++ ))
+do
+        echo "Dice $i is:" ${Dice[$i]}
+done
 
